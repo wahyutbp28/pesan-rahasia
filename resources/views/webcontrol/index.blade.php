@@ -122,7 +122,7 @@
       <li> -->
         <a href="{{ route('messagecontrol.index') }}" class="nav-link link-dark">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-          Messages
+          Pesan
         </a>
       </li>
       <!-- <li>
@@ -145,28 +145,28 @@
         <strong>{{ Auth::user()->username }}</strong>
       </a>
       <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-        <li><a class="dropdown-item" href="/home">Go back</a></li>
+        <li><a class="dropdown-item" href="/home">Kembali</a></li>
       </ul>
     </div>
   </div>
   <div class="b-example-divider"></div>
 
   <div class="container" class="text-center">
-    <h2>Nitcrete Activity</h2>
+    <h2>Aktivitas Web PeRah</h2>
     <hr>
     <table>
       <tr>
-        <td>Many accounts have been created</td>
+        <td>Jumlah akun yang telah dibuat</td>
         <td>:</td>
         <td>{{ $countuser}}</td>
       </tr>
       <tr>
-        <td>Many messages have been created</td>
+        <td>Jumlah pesan yang telah dibuat</td>
         <td>:</td>
         <td>{{ $countmessage }}</td>
       </tr>
       <tr>
-        <td>Many replies have been created</td>
+        <td>Jumlah balasan yang telah dibuat</td>
         <td>:</td>
         <td>{{ $countreply }}</td>
       </tr>
@@ -183,9 +183,9 @@
         <tr>
           <th scope="col">No</th>
           <th scope="col">Username</th>
-          <th scope="col">Created at</th>
-          <th scope="col">Updated at</th>
-          <th>Action</th>
+          <th scope="col">Dibuat pada</th>
+          <th scope="col">Diupdate pada</th>
+          <th>Aksi</th>
         </tr>
       </thead>
       <tbody>
@@ -198,7 +198,7 @@
           <td><form action="{{ route('webcontrol.destroy',$webcontrol->id) }}" method="post">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
                 </form>
           </td>
         </tr>

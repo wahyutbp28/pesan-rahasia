@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Nitcrete</title>
+    <title>PeRah</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/heroes/">
 
@@ -59,13 +59,13 @@
       <div class="container col-xl-10 col-xxl-8 px-4">
         <div class="row align-items-center g-lg-5 py-5">
           <div class="col-lg-7 text-center text-lg-start">
-            <h1 class="display-4 fw-bold lh-1 mb-3">This site is made just for fun</h1>
-            <p class="col-lg-10 fs-4">This site is still in beta stage, if you find a bug or want to give an idea please contact me directly below, thank you for the help.</p>
+            <h1 class="display-4 fw-bold lh-1 mb-3">Website ini dikembangkan sembari belajar.</h1>
+            <p class="col-lg-10 fs-4">Jika ingin improve menggunakan project ini dipersilakan.</p>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a class="link-secondary text-decoration-none" href="https://www.instagram.com/ntroxygen/">Instagram</a></li>
-                <li class="breadcrumb-item"><a class="link-secondary text-decoration-none" href="https://www.facebook.com/aldilan.180705/">Facebook</a></li>
-                <li class="breadcrumb-item"><a class="link-secondary text-decoration-none" href="https://t.me/nitroseven">Telegram</a></li>
+                <li class="breadcrumb-item"><a class="link-secondary text-decoration-none" href="https://www.instagram.com/wahyutbp/">Instagram</a></li>
+                <li class="breadcrumb-item"><a class="link-secondary text-decoration-none" href="https://www.facebook.com/xxxwahyu/">Facebook</a></li>
+                <li class="breadcrumb-item"><a class="link-secondary text-decoration-none" href="https://t.me/wahyutbp">Telegram</a></li>
               </ol>
             </nav>
           </div>

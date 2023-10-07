@@ -122,7 +122,7 @@
       <li> -->
         <a href="{{ route('messagecontrol.index') }}" class="nav-link active">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-          Messages
+          Pesan
         </a>
       </li>
       <!-- <li>
@@ -145,14 +145,14 @@
         <strong>{{ Auth::user()->username }}</strong>
       </a>
       <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-        <li><a class="dropdown-item" href="/home">Go back</a></li>
+        <li><a class="dropdown-item" href="/home">Kembali</a></li>
       </ul>
     </div>
   </div>
   <div class="b-example-divider"></div>
 
   <div class="container" class="text-center">
-    <h2>Nitcrete Activity</h2>
+    <h2>Aktivitas Web PeRah</h2>
     <hr>
     @if(session()->has('scssdlt'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -164,11 +164,11 @@
       <thead>
         <tr>
           <th scope="col">No</th>
-          <th scope="col">To</th>
-          <th scope="col">Message</th>
-          <th scope="col">Created at</th>
-          <th scope="col">Updated at</th>
-          <th>Action</th>
+          <th scope="col">Untuk</th>
+          <th scope="col">Pesan</th>
+          <th scope="col">Dibuat pada</th>
+          <th scope="col">Diupdate pada</th>
+          <th>Aksi</th>
         </tr>
       </thead>
       <tbody>
@@ -182,7 +182,7 @@
           <td><form action="{{ route('messagecontrol.destroy',$messagecontrol->id) }}" method="post">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
                 </form>
           </td>
         </tr>

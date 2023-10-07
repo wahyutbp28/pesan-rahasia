@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Send your message</title>
+    <title>Kirim Pesan</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/heroes/">
 
@@ -69,7 +69,7 @@
       </div>
       <form action="/sendmsg" method="post">
         @csrf
-        <h3>Drop Your Message To {{ $to }}</h3>
+        <h3>Kirim Pesan Anda ke {{ $to }}</h3>
           <div class="row">
             <div class="col-md-6"> 
               @if(session()->has('usrerr'))
@@ -88,7 +88,7 @@
                 <input type="text" class="form-control" value="{{ $to }}" disabled>
               </div>
               <div class="form-group">
-                <textarea class="form-control @error('message') is-invalid @enderror" placeholder="Your Message : " style="width: 100%; height: 80px;" name="message" required></textarea>
+                <textarea class="form-control @error('message') is-invalid @enderror" placeholder="Pesan Kamu : " style="width: 100%; height: 80px;" name="message" required></textarea>
                 @error("message")
                   <div class="invalid-feedback">
                     {{ $message }}
@@ -101,10 +101,10 @@
             </div>
             <div class="col-md-6">
               <div class="mb-3">
-                <small class="text-muted">Even though this message is anonymous, we really appreciate you if you don't send any abusive, insulting, and similar messages. Because it is possible that the recipient of your message is still a minor.</small>
+                <small class="text-muted">Meskipun pesan ini bersifat anonim, kami sangat menghargai Kamu jika Kamu tidak mengirimkan pesan yang bersifat kasar, menghina, dan serupa. Karena kemungkinan besar penerima pesan Kamu masih di bawah umur.</small>
               </div>
             <div>
-              <small>Thanks <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-wink" viewBox="0 0 16 16">
+              <small>Terima Kasih <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-wink" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                 <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm1.757-.437a.5.5 0 0 1 .68.194.934.934 0 0 0 .813.493c.339 0 .645-.19.813-.493a.5.5 0 1 1 .874.486A1.934 1.934 0 0 1 10.25 7.75c-.73 0-1.356-.412-1.687-1.007a.5.5 0 0 1 .194-.68z"/>
               </svg>
@@ -144,7 +144,7 @@
       </div>
       <form action="/sendmsg" method="post">
         @csrf
-        <h3>Drop Your Message</h3>
+        <h3>Kirim Pesan</h3>
           <div class="row">
             <div class="col-md-6"> 
               @if(session()->has('usrerr'))
@@ -159,7 +159,7 @@
                 </div>
               @endif
               <div class="form-group">
-                <input type="text" class="form-control @error('to') is-invalid @enderror" placeholder="Send message to : " name="to" required>
+                <input type="text" class="form-control @error('to') is-invalid @enderror" placeholder="Kirim pesan ke : " name="to" required>
                 @error("to")
                   <div class="invalid-feedback">
                     {{ $message }}
@@ -167,7 +167,7 @@
                 @enderror
               </div>
               <div class="form-group">
-                <textarea class="form-control @error('message') is-invalid @enderror" placeholder="Your Message : " style="width: 100%; height: 80px;" name="message" required></textarea>
+                <textarea class="form-control @error('message') is-invalid @enderror" placeholder="Pesan Kamu : " style="width: 100%; height: 80px;" name="message" required></textarea>
                 @error("message")
                   <div class="invalid-feedback">
                     {{ $message }}
@@ -180,10 +180,10 @@
             </div>
             <div class="col-md-6">
               <div class="mb-3">
-                <small class="text-muted">Even though this message is anonymous, we really appreciate you if you don't send any abusive, insulting, and similar messages. Because it is possible that the recipient of your message is still a minor.</small>
+                <small class="text-muted">Meskipun pesan ini bersifat anonim, kami sangat menghargai Kamu jika Kamu tidak mengirimkan pesan yang bersifat kasar, menghina, dan serupa. Karena kemungkinan besar penerima pesan Kamu masih di bawah umur.</small>
               </div>
             <div>
-              <small>Thanks <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-wink" viewBox="0 0 16 16">
+              <small>Terima Kasih <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-wink" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                 <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm1.757-.437a.5.5 0 0 1 .68.194.934.934 0 0 0 .813.493c.339 0 .645-.19.813-.493a.5.5 0 1 1 .874.486A1.934 1.934 0 0 1 10.25 7.75c-.73 0-1.356-.412-1.687-1.007a.5.5 0 0 1 .194-.68z"/>
               </svg>

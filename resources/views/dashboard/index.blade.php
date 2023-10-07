@@ -14,7 +14,7 @@
       @auth
         <title>{{ Auth::user()->username }}</title>
       @else
-        <title>Nitcrete</title>
+        <title>PeRah - Pesan Rahasia</title>
       @endauth
     @endif
 
@@ -60,7 +60,7 @@
         <div class="container d-flex flex-wrap justify-content-center">
           <a href="/" class="d-flex align-items-center me-lg-auto text-dark text-decoration-none">
             <img class="bi" src="/img/logo.png" alt="" width="40" height="32">
-            <span class="fs-4 text-white">Nitcrete</span>
+            <span class="fs-4 text-white">PeRah - Pesan Rahasia</span>
           </a>
           <div class="col-12 col-lg-auto my-3 mb-lg-0">
             <div class="text-end">
@@ -73,7 +73,7 @@
                     @if(Auth::user()->username == "Aldilan")
                       <li><a class="dropdown-item" href="/webcontrol">Control web</a></li>
                     @endif
-                      <li><a class="dropdown-item" href="/sendmsg">Send message</a></li>
+                      <li><a class="dropdown-item" href="/sendmsg">Kirim Pesan</a></li>
                     @foreach($users as $account)
                       <li><a class="dropdown-item" href="{{ route('account.edit' ,$account->id) }}">Change password</a></li>
                     @endforeach
@@ -88,7 +88,7 @@
                     Login
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/sendmsg">Send message</a></li>
+                    <li><a class="dropdown-item" href="/sendmsg">Kirim Pesan</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="/login">Login</a></li>
                   </ul>
@@ -189,7 +189,7 @@
                           @enderror
                         </div>
                         <div class = "ps-3 mb-3">
-                            <button type="submit" class="btn btn-link link-dark text-decoration-none btn-sm">Send</button>
+                            <button type="submit" class="btn btn-link link-dark text-decoration-none btn-sm">Kirim</button>
                         </div>
                       </form>
                 </div>
@@ -209,13 +209,13 @@
                   @csrf
                     @foreach($users as $user)
                       <input type="hidden" name="to" value="{{$user->username}}">
-                      <textarea class="form-control" placeholder="Send message to {{$user->username}}" name="message" required></textarea>
+                      <textarea class="form-control" placeholder="Kirim pesan ke {{$user->username}}" name="message" required></textarea>
                       <div class="mb-3">
-                        <p class="text-danger">* <small class="text-muted">{{$user->username}} will never know who sent this message</small></p>
+                        <p class="text-danger">* <small class="text-muted">{{$user->username}} tidak akan pernah tahu siapa yang mengirim pesan ini</small></p>
                       </div>
                     @endforeach
                     <div class="d-grid gap-2">
-                      <button class="btn btn-warning" type="submit">Send message</button>
+                      <button class="btn btn-warning" type="submit">Kirim Pesan</button>
                     </div>
                   </form>
                 </div>
@@ -229,7 +229,7 @@
         <div class="container d-flex flex-wrap justify-content-center">
           <a href="/" class="d-flex align-items-center me-lg-auto text-dark text-decoration-none">
             <img class="bi" src="/img/logo.png" alt="" width="40" height="32">
-            <span class="fs-4 text-white">Nitcrete</span>
+            <span class="fs-4 text-white">PeRah - Pesan Rahasia</span>
           </a>
           <div class="col-12 col-lg-auto my-3 mb-lg-0">
             <div class="text-end">
@@ -241,9 +241,9 @@
                   @if(Auth::user()->username == "Aldilan")
                     <li><a class="dropdown-item" href="/webcontrol">Control web</a></li>
                   @endif
-                    <li><a class="dropdown-item" href="/sendmsg">Send message</a></li>
+                    <li><a class="dropdown-item" href="/sendmsg">Kirim Pesan</a></li>
                   @foreach($users as $account)
-                    <li><a class="dropdown-item" href="{{ route('account.edit' ,$account->id) }}">Change password</a></li>
+                    <li><a class="dropdown-item" href="{{ route('account.edit' ,$account->id) }}">Ubah Password</a></li>
                   @endforeach
                   <li><hr class="dropdown-divider"></li>
                   <form action="/logout" method="post">
@@ -286,7 +286,7 @@
                   <h1 class="display-4 fw-bold">{{ Auth::user()->username }}'s Inbox</h1>
               </div>
               <div class="col-lg-6 mx-auto">
-                  <p class="lead mb-4 text-center">The messages below may be sent from people you know or don't know, so please don't take it seriously, as this is just to cheer you up.</p>
+                  <p class="lead mb-4 text-center">Pesan-pesan di bawah ini mungkin dikirimkan oleh orang yang Anda kenal atau tidak, jadi mohon jangan dianggap serius (baper), karena ini hanya untuk hiburan.</p>
               </div>
               @if($msg == 'You have message')
                 @foreach($messages as $message)
@@ -342,7 +342,7 @@
                           @enderror
                         </div>
                         <div class = "ps-3 mb-3">
-                            <button type="submit" class="btn btn-link link-dark text-decoration-none btn-sm">Send</button>
+                            <button type="submit" class="btn btn-link link-dark text-decoration-none btn-sm">Kirim</button>
                         </div>
                       </form>
                 </div>
@@ -360,7 +360,7 @@
                   <div class="card-body">
                     <div class="d-grid gap-2 text-center">
                       <input type="text" class="form-control" value="/home/{{ Auth::user()->username }}" disabled>
-                      <button id="copyLink" data-text="/home/{{ Auth::user()->username }}" class="btn btn-dark">Copy your direct message link here</button>
+                      <button id="copyLink" data-text="/home/{{ Auth::user()->username }}" class="btn btn-dark">Salin tautan pesan Anda di sini</button>
                       <ul class="mt-3">
                         @foreach($shares as $share => $value)
                           @if($share == 'facebook')
@@ -409,7 +409,7 @@
         <div class="container d-flex flex-wrap justify-content-center">
           <a href="/" class="d-flex align-items-center me-lg-auto text-dark text-decoration-none">
             <img class="bi" src="/img/logo.png" alt="" width="40" height="32">
-            <span class="fs-4 text-white">Nitcrete</span>
+            <span class="fs-4 text-white">PeRah - Pesan Rahasia</span>
           </a>
           <form class="col-12 col-lg-auto my-3 mb-lg-0">
             <div class="text-end">
@@ -418,7 +418,7 @@
                   Login
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/sendmsg">Send message</a></li>
+                  <li><a class="dropdown-item" href="/sendmsg">Kirim pesan</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="/login">Login</a></li>
                 </ul>
@@ -432,17 +432,17 @@
       <main>
           <div class="px-4 pt-5 my-5">
               <div class="text-center mb-5">
-                  <h1 class="display-4 fw-bold">You haven't logged in yet</h1>
+                  <h1 class="display-4 fw-bold">Kamu belum login</h1>
               </div>
               <div class="col-lg-6 mx-auto">
                   <p class="lead mb-4 text-center">
-                    Do you want to message now? <a class="text-decoration-none link-dark" href="/sendmsg">Here
+                  Langsung kirim pesan => <a class="text-decoration-none link-dark" href="/sendmsg">Klik Disini
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
                       </svg>
                     </a><br>
-                    Or <br>
-                    You want to login first? <a class="text-decoration-none link-dark" href="/login">Here
+                    atau <br>
+                    Ingin login / membuat akun untuk menerima pesan? <a class="text-decoration-none link-dark" href="/login">Klik Disini
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
                           <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>

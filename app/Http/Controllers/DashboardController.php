@@ -38,11 +38,11 @@ class DashboardController extends Controller
 
         $countmessage = $messages->count();
         if ($countmessage > 0) {
-            $msg = "You have message";
+            $msg = "Kamu punya pesan";
             $i = 1;
             return view('dashboard.index',compact('users','messages','msg','replies','i','ket','shares'));
         }else{
-            $msg = "You dont have message rn, dont be sad :)";
+            $msg = "Kamu belum punya pesan, jangan sedih :)";
             return view('dashboard.index',compact('users','messages','msg','replies','ket','shares'));
         }
     }
@@ -69,11 +69,11 @@ class DashboardController extends Controller
             $countmessage = $messages->count();
 
             if ($countmessage > 0) {
-                $msg = "You have message";
+                $msg = "Kamu punya pesan";
                 $i = 1;
                 return view('dashboard.index',compact('users','messages','msg','replies','i','ket'));
             }else{
-                $msg = "You dont have message rn, dont be sad :)";
+                $msg = "Kamu belum punya pesan, jangan sedih :)";
                 return view('dashboard.index',compact('users','messages','msg','replies','ket'));
             }
         }else{

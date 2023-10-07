@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Send your message</title>
+    <title>Kirim pesan kamu</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/heroes/">
 
@@ -62,7 +62,7 @@
       <form action="{{ route('account.update', $account->id) }}" method="post">
         @csrf
         @method('PUT')
-        <h3>Update Your Account</h3>
+        <h3>Update akun kamu</h3>
           <div class="row">
             <div class="col-md-6"> 
               @if(session()->has('scssupdt'))
@@ -91,7 +91,7 @@
                 @enderror
               </div>
               <div class="form-group">
-                <input type="password" class="form-control @error('oldpassword') is-invalid @enderror" placeholder="Old password : " name="oldpassword" required>
+                <input type="password" class="form-control @error('oldpassword') is-invalid @enderror" placeholder="Password lama : " name="oldpassword" required>
                 @error("oldpassword")
                   <div class="invalid-feedback">
                     {{ $message }}
@@ -101,16 +101,14 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="New password : " name="password" required>
+                <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password baru : " name="password" required>
                 @error("password")
                   <div class="invalid-feedback">
                     {{ $message }}
                   </div>
                 @enderror
               </div>
-              <div class="mb-3">
-                <p class="text-danger">* <small class="text-muted">Account updates can only be done once in 7 days.</small></p>
-              </div>
+              
             </div>
             <div class="col-md-6">
               <div class="form-group">
