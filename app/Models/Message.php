@@ -12,3 +12,4 @@ class Message extends Model
     protected $table = 'messages';
     protected $fillable = ['to','message'];
 }
+ 

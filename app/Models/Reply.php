@@ -12,3 +12,4 @@ class Reply extends Model
     protected $table = 'replies';
     protected $fillable = ['id_message','reply'];
 }
+ 
