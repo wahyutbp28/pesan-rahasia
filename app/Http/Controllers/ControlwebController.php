@@ -6,7 +6,7 @@ use App\Models\User;
 use App\Models\Reply;
 use App\Models\Message;
 use Illuminate\Http\Request;
-
+ 
 class ControlwebController extends Controller
 {
     /**

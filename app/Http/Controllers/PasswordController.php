@@ -10,4 +10,4 @@ class PasswordController extends Controller
     {
         return view('password.index');
     }
-}
+} 
