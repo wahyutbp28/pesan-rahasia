@@ -5,4 +5,4 @@
   tooltipTriggerList.forEach(function (tooltipTriggerEl) {
     new bootstrap.Tooltip(tooltipTriggerEl)
   })
-})()
+})() 
