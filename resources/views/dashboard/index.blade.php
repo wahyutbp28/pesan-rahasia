@@ -10,7 +10,7 @@
       @foreach($users as $user)
         <title>{{$user->username}}</title>
       @endforeach
-    @else
+    @else 
       @auth
         <title>{{ Auth::user()->username }}</title>
       @else

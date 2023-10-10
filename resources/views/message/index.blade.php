@@ -9,7 +9,7 @@
     <title>Kirim Pesan</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/heroes/">
-
+ 
     <!-- Icon -->
     <link rel="icon" href="/img/favicon.png">
     <link rel="stylesheet" type="text/css" href="{{ url('css/style.css') }}">
